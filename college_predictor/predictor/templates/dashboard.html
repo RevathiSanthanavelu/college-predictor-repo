@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+
+<div class="page">
+  <div class="card active" id="personal">
+    <h2>👤 Personal Details</h2>
+
+    <div class="form-group">
+      <input type="text" placeholder="Full Name">
+    </div>
+
+    <div class="form-group">
+      <input type="date">
+    </div>
+
+    <div class="form-group">
+      <input type="email" placeholder="Email">
+    </div>
+
+    <div class="form-group">
+      <input type="tel" placeholder="Mobile Number">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Aadhaar Number">
+    </div>
+
+    <div class="form-group">
+      <input type="email" placeholder="Alternate Email">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="State">
+    </div>
+
+    <!-- Caste Radio -->
+    <div class="form-group">
+      <label class="label">Caste / Community</label>
+      <div class="radio-group">
+        <label><input type="radio" name="caste"> OC</label>
+        <label><input type="radio" name="caste"> BC</label>
+        <label><input type="radio" name="caste"> MBC</label>
+        <label><input type="radio" name="caste"> SC/ST</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Father Name">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Mother Name">
+    </div>
+
+    <div class="form-group">
+        <input type="text" placeholder="Father Occupation">
+    </div>
+
+    <div class="form-group">
+        <input type="text" placeholder="Annual Income">
+    </div>
+
+    <button onclick="goNext()">Next ➜</button>
+
+  </div>
+<!-- </div> -->
+<!-- SECTION B -->
+  <div class="card" id="academic">
+    <h2>🎓 Academic Details</h2>
+
+    <h4>10th Marks</h4>
+    <input id="tamil" placeholder="Tamil" oninput="calc10()">
+    <input id="english" placeholder="English" oninput="calc10()">
+    <input id="maths10" placeholder="Maths" oninput="calc10()">
+    <input id="science" placeholder="Science" oninput="calc10()">
+    <input id="social" placeholder="Social" oninput="calc10()">
+
+    <p>Total: <span id="total10">0</span></p>
+    <p>Percentage: <span id="percent10">0</span>%</p>
+
+    <h4>12th Cutoff</h4>
+    <input id="maths12" placeholder="Maths" oninput="calcCutoff()">
+    <input id="physics" placeholder="Physics" oninput="calcCutoff()">
+    <input id="chemistry" placeholder="Chemistry" oninput="calcCutoff()">
+
+    <p>Cutoff: <span id="cutoff">0</span></p>
+
+    <button onclick="goPersonal()">⬅ Back</button>
+    <button>Save & Continue</button>
+  </div>
+
+</div>
+
+
+<script src="../static/js/dashboard.js"></script>
+</body>
+</html>
